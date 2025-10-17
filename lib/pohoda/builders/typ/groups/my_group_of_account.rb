@@ -3,6 +3,8 @@ module Pohoda
     module Typ
       module Groups
         module MyGroupOfAccount
+          include ParserCore::BaseBuilder
+          
           def builder
             root = Ox::Element.new(name)
             root = add_attributes_and_namespaces(root)
